@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: eureka
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: eureka
+  template:
+    metadata:
+      labels:
+        app: eureka
+    spec:
+      containers:
+        - name: eureka
+          image: 445198795790.dkr.ecr.eu-west-1.amazonaws.com/eureka-server:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8761
+      imagePullSecrets:
+        - name: ecr-creds        
+

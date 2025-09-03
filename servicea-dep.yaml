@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: servicea
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: servicea
+  template:
+    metadata:
+      labels:
+        app: servicea
+    spec:
+      containers:
+        - name: servicea
+          image: 445198795790.dkr.ecr.eu-west-1.amazonaws.com/servicea:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8761
+      imagePullSecrets:
+        - name: ecr-creds

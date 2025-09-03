@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: serviceb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: serviceb
+  template:
+    metadata:
+      labels:
+        app: serviceb
+    spec:
+      containers:
+        - name: serviceb
+          image: 445198795790.dkr.ecr.eu-west-1.amazonaws.com/serviceb:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8761
+      imagePullSecrets:
+        - name: ecr-creds
