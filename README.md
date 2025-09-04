@@ -4,7 +4,7 @@ This project demonstrates how to build and deploy containerized Spring Boot micr
 
 ---
 
-## 📦 Project Structure
+## Project Structure
 
 ```
 eureka-sd/
@@ -17,7 +17,7 @@ eureka-sd/
 
 ---
 
-## ⚙️ Technologies Used
+## Technologies Used
 
 - Java 17 + Spring Boot
 - Spring Cloud Netflix Eureka
@@ -31,7 +31,7 @@ eureka-sd/
 
 ---
 
-## 🔧 How It Works
+## How It Works
 
 1. **Eureka Server** runs on port `8761` and acts as a service registry.
 2. **Service A** registers itself with Eureka and exposes a REST endpoint `/helloWorld`.
@@ -44,7 +44,7 @@ eureka-sd/
 
 ---
 
-## 🛠️ Setup Instructions
+##  Setup Instructions
 
 ### 1. Clone the Repository
 
@@ -74,14 +74,14 @@ cd ../serviceb
 
 ---
 
-## 🔐 AWS ECR Auth & Kubernetes
+## AWS ECR Auth & Kubernetes
 
 - Jenkins uses AWS CLI to log in to ECR and push images.
 - Kubernetes uses an image pull secret (`ecr-creds`) created dynamically in the pipeline.
 
 ---
 
-## 🌐 Access URLs
+## Access URLs
 
 | Service       | Port   | URL Example                                 |
 |---------------|--------|----------------------------------------------|
