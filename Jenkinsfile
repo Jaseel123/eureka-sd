@@ -52,10 +52,10 @@ pipeline {
         stage('Deploy to Kubernetes') {
             steps {
                 sh '''
-                aws ecr get-login-password --region eu-west-1 | kubectl create secret docker-registry ecr-creds \
+                kubectl create secret docker-registry ecr-creds \
                   --docker-server=445198795790.dkr.ecr.eu-west-1.amazonaws.com \
                   --docker-username=AWS \
-                  --docker-password-stdin \
+                  --docker-password-stdin=$(aws ecr get-login-password --region eu-west-1) \
                   --dry-run=client -o yaml | kubectl apply -f -
                 
                 kubectl apply -f k8s/eureka-deployment.yaml
