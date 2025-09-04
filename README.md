@@ -121,7 +121,7 @@ eureka-sd/
 
 ---
 
-## 9. Dockerfile Explained (Multi-Stage Build)
+## 9. Dockerfile (Multi-Stage Build)
 
 Each microservice uses the following Dockerfile:
 
