@@ -62,7 +62,7 @@ eureka-sd/
 
 ---
 
-## 6.  Spring Boot + Eureka Setup
+## 6. Spring Boot + Eureka Setup
 
 ### Eureka Server
 - Bootstrapped using Spring Initializr with `Eureka Server` dependency.
@@ -100,7 +100,7 @@ eureka-sd/
 
 ---
 
-## 7. ⚙️ CI/CD Pipeline (Jenkins)
+## 7. CI/CD Pipeline (Jenkins)
 
 ### Jenkinsfile Stages:
 1. **Checkout Code** from GitHub.
